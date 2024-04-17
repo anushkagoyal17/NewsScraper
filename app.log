@@ -1,0 +1,4 @@
+2024-04-17 16:40:09,230 - INFO - Scraping started...
+2024-04-17 16:40:13,184 - INFO - Pages: 173
+2024-04-17 17:41:55,039 - WARNING - Exception Case-> https://apnews.com/author/krutika-pathi
+Issue: Date not fetched!
