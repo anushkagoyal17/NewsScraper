@@ -1,8 +1,13 @@
 *** Settings ***
-Library    APNewsScraper
+Library    tasks.py
+Library    Collections
+
+*** Variables ***
+${SEARCH_PHRASE}    delhi
+${NEW_CATEGORY}    test
+${NUM_MONTHS}    1
 
 *** Tasks ***
 Scrape APNews
     [Documentation]    Scrapes APNews for given search phrase, news category, and number of months
-    Initialize APNewsScraper    ${SEARCH_PHRASE}    ${NEW_CATEGORY}    ${NUM_MONTHS}
-    Scrape
+    Scrape APNews
