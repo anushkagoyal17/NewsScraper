@@ -1,9 +1,10 @@
-import os, openpyxl
+import os
+import openpyxl
 from datetime import datetime
 
-SEARCH_PHRASE = input('Enter search phrase: ')
-NEW_CATEGORY = input('Enter news category: ')
-NUM_MONTHS = int(input('Enter number of months: '))
+SEARCH_PHRASE = os.getenv('SEARCH_PHRASE', default='default_search_phrase')
+NEW_CATEGORY = os.getenv('NEW_CATEGORY', default='default_category')
+NUM_MONTHS = int(os.getenv('NUM_MONTHS', default='6'))
 
 LAST_N_DAYS = NUM_MONTHS * 30
 
@@ -25,7 +26,6 @@ if not os.path.exists(OUTPUT_FILE):
     ws_comments.append(COMMENTS_COLUMNS)
     wb.save(OUTPUT_FILE)
 
-# breakpoint()
 IMAGES_FOLDER = 'Images'
 if not os.path.exists(IMAGES_FOLDER):
     os.makedirs(IMAGES_FOLDER)
