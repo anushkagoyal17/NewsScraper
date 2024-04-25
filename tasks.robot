@@ -1,5 +1,5 @@
 *** Settings ***
-Library    tasks.py
+Library    tasks
 Library    Collections
 
 *** Variables ***
