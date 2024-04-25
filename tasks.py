@@ -1,20 +1,9 @@
-*** Settings ***
-Library    APNewsScraper.py
-Library    Collections
+from APNewsScraper import APNewsScraper
 
-*** Variables ***
-${SEARCH_PHRASE}    delhi
-${NEW_CATEGORY}    test
-${NUM_MONTHS}    1
-
-*** Tasks ***
-Scrape APNews
-    [Documentation]    Scrapes APNews for given search phrase, news category, and number of months
-    Initialize APNewsScraper    ${SEARCH_PHRASE}    ${NEW_CATEGORY}    ${NUM_MONTHS}
-    Scrape
-
-*** Keywords ***
-Scrape
-    ${scraper}=    Initialize APNewsScraper    ${SEARCH_PHRASE}    ${NEW_CATEGORY}    ${NUM_MONTHS}
-    ${result}=    Scrape    ${scraper}
-    Log    ${result}
+def Scrape_APNews():
+    search_phrase = "delhi"
+    news_category = "test"
+    num_months = 1
+    
+    scraper = APNewsScraper(search_phrase, news_category, num_months)
+    scraper.scrape()
