@@ -1,5 +1,5 @@
 *** Settings ***
-Library    APNewsScraper.py
+Library    APNewsScraper
 
 *** Tasks ***
 Scrape APNews
