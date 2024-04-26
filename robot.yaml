@@ -1,15 +1,11 @@
-tasks:
-  Run Task:
-    shell: python -m robocorp.tasks run tasks.py
-    arguments:
-      SEARCH_PHRASE: "${SEARCH_PHRASE}"
-      NEWS_CATEGORY: "${NEWS_CATEGORY}"
-      NUM_MONTHS: "${NUM_MONTHS}"
-
 variables:
   SEARCH_PHRASE: "delhi"
   NEWS_CATEGORY: "test"
   NUM_MONTHS: 1
+
+tasks:
+  Scrape APNews:
+    shell: python -m robocorp.tasks scrape_apnews -- --search_phrase "${SEARCH_PHRASE}" --news_category "${NEWS_CATEGORY}" --num_months "${NUM_MONTHS}"
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
