@@ -1,10 +1,5 @@
 *** Settings ***
 Library  robot.api.deco
 
-*** Variables ***
-${SEARCH_PHRASE}  delhi
-${NEW_CATEGORY}  
-${NUM_MONTHS}  1
-
 *** Task ***
-Scrape APNews
+Scrape APNews  search_phrase=business  num_months=3
