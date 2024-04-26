@@ -4,10 +4,7 @@ from APNewsScraper import APNewsScraper
 from config import SEARCH_PHRASE, NEW_CATEGORY, NUM_MONTHS
 
 @task
-# def task():
-#     print("fingers crossed")
-#     return "fingers crossed"
-# @keyword("Scrape APNews")
+@keyword("Scrape APNews")
 def scrape_apnews(search_phrase=SEARCH_PHRASE, news_category=NEW_CATEGORY, num_months=NUM_MONTHS):
     """Scrapes news data from APNews based on provided search parameters.
 
@@ -22,4 +19,3 @@ def scrape_apnews(search_phrase=SEARCH_PHRASE, news_category=NEW_CATEGORY, num_m
         scraper.scrape()
     except Exception as e:
         print(f"An error occurred during scraping: {e}")
-
