@@ -1,4 +1,5 @@
 from robot.api.deco import keyword
+from robocorp.tasks import task
 from APNewsScraper import APNewsScraper
 from config import SEARCH_PHRASE, NEW_CATEGORY, NUM_MONTHS
 
