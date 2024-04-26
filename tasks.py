@@ -3,7 +3,7 @@ from APNewsScraper import APNewsScraper
 from config import SEARCH_PHRASE, NEW_CATEGORY, NUM_MONTHS
 
 @task
-def my_task():
+def task():
     print("fingers crossed")
     return "fingers crossed"
 # @keyword("Scrape APNews")
