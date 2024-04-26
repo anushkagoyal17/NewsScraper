@@ -1,13 +1,10 @@
 *** Settings ***
-Library    tasks
-Library    Collections
+Library  robot.api.deco
 
 *** Variables ***
-${SEARCH_PHRASE}    delhi
-${NEW_CATEGORY}    test
-${NUM_MONTHS}    1
+${SEARCH_PHRASE}  delhi
+${NEW_CATEGORY}  
+${NUM_MONTHS}  1
 
-*** Tasks ***
+*** Task ***
 Scrape APNews
-    [Documentation]    Scrapes APNews for given search phrase, news category, and number of months
-    Scrape APNews
