@@ -8,7 +8,7 @@ from config import SEARCH_PHRASE, NEW_CATEGORY, NUM_MONTHS
 #     print("fingers crossed")
 #     return "fingers crossed"
 # @keyword("Scrape APNews")
-def scrape_apnews():
+def scrape_apnews(search_phrase=SEARCH_PHRASE, news_category=NEW_CATEGORY, num_months=NUM_MONTHS)):
     """Scrapes news data from APNews based on provided search parameters.
 
     Args:
@@ -17,7 +17,7 @@ def scrape_apnews():
         num_months (int, optional): The number of months to consider for searching recent news (defaults to 1 month). Defaults to NUM_MONTHS from config.py.
     """
 
-    scraper = APNewsScraper()
+    scraper = APNewsScraper(search_phrase, news_category, num_months)
     try:
         scraper.scrape()
     except Exception as e:
