@@ -4,8 +4,8 @@ from config import SEARCH_PHRASE, NEW_CATEGORY, NUM_MONTHS
 
 @task
 def my_task():
-    print('fingers crossed")
-    return 'fingers crossed"
+    print("fingers crossed")
+    return "fingers crossed"
 # @keyword("Scrape APNews")
 # def scrape_apnews(search_phrase=SEARCH_PHRASE, news_category=NEW_CATEGORY, num_months=NUM_MONTHS):
 #     """Scrapes news data from APNews based on provided search parameters.
