@@ -4,7 +4,7 @@ variables:
   NUM_MONTHS: 1
 
 tasks:
-  Github NewsScraper:
+  scrape_apnews:
     shell: python -m robocorp.tasks scrape_apnews --search_phrase "${SEARCH_PHRASE}" --news_category "${NEWS_CATEGORY}" --num_months "${NUM_MONTHS}"
 
 
